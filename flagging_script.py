@@ -26,7 +26,6 @@ def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', k
     """
     results = []
     filepaths = [Path(fp) for fp in filepaths]
-    print(filepaths)
     for fp in filepaths:
         try:
             df = robust_read_csv(fp).drop_duplicates()
@@ -51,6 +50,7 @@ def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', k
             df = df[base_cols].copy()
 
             # Run flaggers
+            print(f'\n\nExtracting suicide lexicon tokens in {fp}')
             df_flags = flag_lexicon_custom(df, text_column=text_column)
             df_flags = flag_suicide_related_emojis(df_flags, text_column=text_column)
             df_flags = flag_lexicon_swaminathan_2023(df_flags, text_column=text_column, debug=False)
