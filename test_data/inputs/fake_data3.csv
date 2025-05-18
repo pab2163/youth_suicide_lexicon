@@ -1,0 +1,19 @@
+id_message,id_row,tm_message_start,tm_message_end,id_app,text_preproc,flagged
+15,85,2019-10-29T12:10:44Z,2019-10-29T12:10:45Z,com.apple.MailCompositionService,Résumé,1
+2619,54535,2019-10-29T12:11:33Z,2019-10-29T12:11:34Z,com.mercariapp.ios.mercari,Français,1
+2620,54550,2019-10-29T12:12:28Z,2019-10-29T12:12:31Z,com.mercariapp.ios.mercari,Mañana,1
+2623,54585,2019-10-29T12:12:35Z,2019-10-29T12:12:45Z,com.mercariapp.ios.mercari,straße,1
+109,3284,2019-10-29T12:24:00Z,2019-10-29T12:24:01Z,com.apple.mobilesafari,€uro,1
+590,10564,2019-10-29T17:19:15Z,2019-10-29T17:19:15Z,com.apple.MobileSMS,Café Mocha™,1
+592,10623,2019-10-29T17:19:20Z,2019-10-29T17:19:37Z,com.apple.MobileSMS,“Quotes”,1
+595,10732,2019-10-29T18:23:41Z,2019-10-29T18:24:32Z,com.apple.MobileSMS,8 65 6C 6C 6F 20 77 6F 72 6C 64 E9 21,1
+596,10742,2019-10-29T18:29:03Z,2019-10-29T18:29:07Z,com.apple.MobileSMS,This is a test with an incomplete UTF-8 byte C3 then some valid ASCII,1
+597,10766,2019-10-29T18:29:35Z,2019-10-29T18:29:42Z,com.apple.MobileSMS,__ (Grinning Face),1
+599.4,10842.3,2019-10-29T17:19:15Z,2019-10-29T17:19:15Z,com.apple.MobileSMS,__ (Thumbs Up),1
+601.2,10894.6,2019-10-29T17:19:20Z,2019-10-29T17:19:37Z,com.apple.MobileSMS,,1
+603,10946.9,2019-10-29T18:23:41Z,2019-10-29T18:24:32Z,com.apple.MobileSMS,__ (Red Heart),1
+604.8,10999.2,2019-10-29T18:29:03Z,2019-10-29T18:29:07Z,com.apple.MobileSMS,,1
+606.6,11051.5,2019-10-29T18:29:35Z,2019-10-29T18:29:42Z,com.apple.MobileSMS,,1
+608.4,11103.8,2019-10-29T17:19:15Z,2019-10-29T17:19:15Z,com.apple.MobileSMS,,1
+610.2,11156.1,2019-10-29T17:19:20Z,2019-10-29T17:19:37Z,com.apple.MobileSMS,,1
+612,11208.4,2019-10-29T18:23:41Z,2019-10-29T18:24:32Z,com.apple.MobileSMS,,1

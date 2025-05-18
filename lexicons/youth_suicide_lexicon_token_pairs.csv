@@ -1,0 +1,50 @@
+﻿tokens,pairs,freestanding_token,freestanding_pair
+anti freeze|antifreeze|bleach|detergent|tide pod|shoe polish,die|dead|death|dying|died|ate,FALSE,TRUE
+anti freeze|antifreeze|bleach|detergent|tide pod|shoe polish,kill m|kill you|kill u|lethal|toxic|drink|drank|swallow|ingest|poison|chug|eat|painless|painful,FALSE,FALSE
+balcony|bridge|cliff|skyscraper|tall building|ledge|canyon|gorge|the roof|my roof|high place|the void|the edge|ladder,jump|throw|off|painless|painful,FALSE,FALSE
+bang|slam,head against the wall|head on the wall|head against a wall|head on a wall|head on wall|head against wall|head into the wall|head into a wall,FALSE,FALSE
+blade,kill my|kill your|kill ur|lethal|pencil sharpen|nightstand|night stand|bed,FALSE,FALSE
+cant do this|cannot do this|cant take it|cannot take it|im done|im so done|I am done|I am so done,life|living|live,TRUE,FALSE
+car off,drive|driving|bridge|the edge of a|the edge of the|ledge,FALSE,FALSE
+carbon,kill m|kill you|kill u|lethal|toxic|ingest|poison,FALSE,FALSE
+charcoal,kill m|kill you|kill u|lethal|toxic|monoxide|poison,FALSE,FALSE
+chemical,kill m|kill you|kill u|lethal|drink|swallow|ingest|poison,FALSE,FALSE
+cutting|cut|cuts,my neck|my skin|my wrist|my vein|my arter|my arm|my throat|my insid|my stomach|my belly|my abdomen|cant stop|i keep|will keep|want to|urge|impuls,TRUE,FALSE
+cyanide,die|dead|death|dying|died,FALSE,TRUE
+cyanide,kill m|kill you|kill u|lethal|toxic|drink|swallow|ingest|poison|pill|salts|apple|seed,FALSE,FALSE
+die|died|death|dead|dying,depress|anxiou|anxiet|want to|wanna|lowest point|pain|crying|hate myself|failure|lonely|loneli|my body|dark place|dark thoughts|hopeless|no hope|mental health|mental illness|bpd|borderline|bipolar|only option|no option|no other option|miserable,TRUE,FALSE
+disappear,die|dead|death|dying|died,FALSE,TRUE
+disappear,kill m|kill you|kill u|lethal|impuls|urge|life,FALSE,FALSE
+drown,pain|quick|easy|easier|self|selves|how long,FALSE,FALSE
+exhaust|gas|inhal,kill m|kill you|kill u|lethal|toxic|monoxide|poison,FALSE,FALSE
+exhaust|inhal|injection|hydrogen|charcoal|chemical|carbon|meds|monoxide|muscle relax|flexeril|cyclobenza|narcotic|opiate|opioid|oxycod|oxycont|morphine|codeine|benzo|sedative|pill|sleep med|sleeping|impuls|urge|meds|medication|ativan|lorazepam|halcion|triazolam|klonopin|clonopin|clonazepam|librium|chlordia|tranxene|cloraz|valium|diazepam|xanax|alprazo|advil|ibuprof|painkill|tylenol|aspirin|fentanyl|heroin|cocaine|metroproll|adderal|proxac|lexapro|seroquel|wellbutrin|acetimin|alcohol|allegra|ampheta|aptensio|barbitu|benedryl|bupropion|cannabis|weed|celexa|cipralex|cipramil|citalopram|claritin|clonidin|clozap|concerta|cymbalta|dayquil|daytrana|desven|desyrel|dexedrine|dmt|duloxeti|Fffexor|ethanol|faverin|fluoxet|fluvoxami|focalin|haldol|hallucin|hydroco|ketamin|lsd|luvox|mescalin|methado|meth|mirtazap|morphin|naproxen|nyquil|opium|oxyco|paracet|paroxet|paxil|pristiq|prozac|psilocy|quilichew|quilivant|ritalin|sarafem|seroxat|sertralin|tramadol|trazod|trintellix|venlafax|viibryd|vilazodo|vortioxe|vyvanse|zoloft|zyrtec|over the counter|overdos|pesticide|plastic bag|prescription|perscription|suffocat,die|dead|death|dying|died,FALSE,TRUE
+gas,die|dead|death|dying|died,TRUE,TRUE
+gun|glock|rifle|ar-15|ar15|ak47|ak-47,i want|pull the trigger|pulling the trigger|my head|my neck|to the head|in my mouth|at my face|my brain|impuls|urge|painless|quick|fast|chance of failure|night stand|nightstand|bed,TRUE,FALSE
+hang,noose|rope|cord|cable|chok|painful|painless|by a thread|impuls|urge,TRUE,FALSE
+hanged,noose|rope|cord|cable|chok|painful|painless|by a thread,TRUE,FALSE
+hanging,noose|rope|cord|cable|chok|painful|painless|by a thread,TRUE,FALSE
+helium,euthanasia|exit bag|hood|asphyxiation|pain|suffocat,FALSE,FALSE
+hung,noose|rope|cord|cable|chok|painful|painless|by a thread,TRUE,FALSE
+hydrogen,kill m|kill you|kill u|lethal|toxic|drink|swallow|ingest|poison|sulfide,FALSE,FALSE
+injection,kill m|kill you|kill u|lethal,FALSE,FALSE
+jump|in front of a|throw my self|throw myself|out into|into the way of|in front of the,bus|train|truck|subway|traffic|railroad|car|highway,TRUE,FALSE
+knife|glass,my neck|my skin|my wrist|my vein|my arter|my arm|my throat|my insid|my stomach|my belly|my abdomen|impuls|urge|my bed|nightstand|night stand,FALSE,FALSE
+meds,kill m|kill you|kill u|lethal|overdose|bottle of|how many|impuls|urge|overtake|over take,TRUE,FALSE
+monoxide,kill m|kill you|kill u|lethal|toxic|ingest|poison,FALSE,FALSE
+muscle relax|flexeril|cyclobenza,kill m|kill you|kill u|lethal|toxic|poison,FALSE,FALSE
+narcotic,kill m|kill you|kill u|lethal|toxic|poison,FALSE,FALSE
+OD|OD'd|OD'ing|Odd|Oding|overtake|over take|syringe,die|dead|death|dying|died,TRUE,TRUE
+OD|OD'd|OD'ing|Odd|Oding|overtake|over take|syringe,meds|pot,TRUE,TRUE
+OD|OD'd|OD'ing|Odd|Oding|overtake|over take|syringe,kill m|kill you|kill u|lethal|toxic|benzo|sedative|pill|sleep med|sleeping|how much|impuls|urge|many|meds|medication|ativan|lorazepam|halcion|triazolam|klonopin|clonopin|clonazepam|librium|chlordia|tranxene|cloraz|valium|diazepam|xanax|alprazo|advil|ibuprof|painkill|tylenol|aspirin|fentanyl|heroin|cocaine|metroproll|adderal|proxac|lexapro|seroquel|wellbutrin|acetimin|alcohol|allegra|ampheta|aptensio|barbitu|benedryl|bupropion|cannabis|weed|celexa|cipralex|cipramil|citalopram|claritin|clonidin|clozap|concerta|cymbalta|dayquil|daytrana|desven|desyrel|dexedrine|dmt|duloxeti|Fffexor|ethanol|faverin|fluoxet|fluvoxami|focalin|haldol|hallucin|hydroco|ketamin|lsd|luvox|mescalin|methado|meth|mirtazap|morphin|naproxen|nyquil|opium|oxyco|paracet|paroxet|paxil|pristiq|prozac|psilocy|quilichew|quilivant|ritalin|sarafem|seroxat|sertralin|tramadol|trazod|trintellix|venlafax|viibryd|vilazodo|vortioxe|vyvanse|zoloft|zyrtec|painless|painful|tablet,TRUE,FALSE
+opiate|opioid|oxycod|oxycont|morphine|codeine|benzo|sedative|pill|sleep med|sleeping|impuls|meds|medication|urge|ativan|lorazepam|halcion|triazolam|klonopin|clonopin|clonazepam|librium|chlordia|tranxene|cloraz|valium|diazepam|xanax|alprazo|advil|ibuprof|painkill|tylenol|aspirin|fentanyl|heroin|cocaine|metroproll|adderal|proxac|lexapro|seroquel|wellbutrin|acetimin|alcohol|allegra|ampheta|aptensio|barbitu|benedryl|bupropion|cannabis|weed|celexa|cipralex|cipramil|citalopram|claritin|clonidin|clozap|concerta|cymbalta|dayquil|daytrana|desven|desyrel|dexedrine|dmt|duloxeti|Fffexor|ethanol|faverin|fluoxet|fluvoxami|focalin|haldol|hallucin|hydroco|ketamin|lsd|luvox|mescalin|methado|meth|mirtazap|morphin|naproxen|nyquil|opium|oxyco|paracet|paroxet|paxil|pristiq|prozac|psilocy|quilichew|quilivant|ritalin|sarafem|seroxat|sertralin|tramadol|trazod|trintellix|venlafax|viibryd|vilazodo|vortioxe|vyvanse|zoloft|zyrtec,kill m|kill you|kill u|lethal|toxic|poison|how much|how many|overdose|bottle of|painless|painful,FALSE,FALSE
+over the counter,kill m|kill you|kill u|lethal|toxic|poison|how much|how many|painless|painful,FALSE,FALSE
+overdos,kill m|kill you|kill u|lethal|toxic|how much|how many|impuls|urge|painless|painful|tablet,FALSE,FALSE
+pesticide,kill m|kill you|kill u|lethal|toxic|drink|swallow|ingest|poison|chug|painless|painful,FALSE,FALSE
+plastic bag,kill m|kill you|kill u|lethal|on my head|over my head|over my face|painless|painful,FALSE,FALSE
+precipice,jump|throw|off,FALSE,FALSE
+prescription,kill m|kill you|kill u|lethal|toxic|poison|painless|painful,FALSE,FALSE
+razor|sharp object,my neck|my skin|my wrist|my vein|my arter|my arm|my throat|my insid|my stomach|my belly|cut|cutting|take apart|plan|my bed|nightstand|night stand,FALSE,FALSE
+rope|cord|cable,around my neck|around neck|around your neck|around his neck|around her neck|around ur neck|around my head|around ur head|around his head|around her head|around your|plan head|chair|impuls|urge|painless|painful|my bed|nightstand|night stand,FALSE,FALSE
+shotgun|handgun|pistol|revolver|9mm|firearm|bullet,i want|pull the trigger|pulling the trigger|my head|my neck|to the head|in my mouth|at my face|my brain|painless|painful|my bed|nightstand|night stand,FALSE,FALSE
+slice|stab|slit|slicing|stabbing|slitting,wrist|neck|throat|vein|arter|stomach|belly|abdomen|I keep|impuls|urge|cant stop|myself|yourself|urself|painless|painful,FALSE,FALSE
+suffocat,kill my|kill your|kill ur|lethal|pass out|passed out|pass out|how long|impuls|urge|painless|painful,FALSE,FALSE
