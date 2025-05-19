@@ -1,6 +1,7 @@
 import pandas as pd
 from pathlib import Path
 from lexicon_functions import *
+import argparse
 
 def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', keep_columns=None):
     """
@@ -82,8 +83,6 @@ def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', k
 
 
 # CLI
-import argparse
-
 def main():
     parser = argparse.ArgumentParser(
         description="Flag suicide-related language in one or more CSV files using lexicon-based methods."
