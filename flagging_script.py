@@ -2,8 +2,10 @@ import pandas as pd
 from pathlib import Path
 from lexicon_functions import *
 import argparse
+from low_lexicon import *
 
-def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', keep_columns=None):
+def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', keep_columns=None, run_low_lexicon=False):
+
     """
     Flags suicide-related language in a list of CSV files using lexicon-based methods.
 
@@ -25,6 +27,18 @@ def flag_files_with_filepath(filepaths, output_path, text_column='text_clean', k
     Returns:
     - pd.DataFrame: The combined flagged DataFrame.
     """
+
+    # optional - run low lexicon flagging
+    if run_low_lexicon:
+     # Run extraction
+        extract_low_2024_srl_features_from_files(
+            filepaths=filepaths,
+            output_dir=os.path.join(Path(output_path).parent, 'low_lexicon'),
+            text_column=text_column,
+            keep_columns=keep_columns
+            )
+
+
     results = []
     filepaths = [Path(fp) for fp in filepaths]
     for fp in filepaths:
@@ -110,7 +124,8 @@ def main():
         filepaths=args.filepaths,
         output_path=args.output_path,
         text_column=args.text_column,
-        keep_columns=args.keep_columns
+        keep_columns=args.keep_columns,
+        run_low_lexicon=True
     )
 
 if __name__ == "__main__":
