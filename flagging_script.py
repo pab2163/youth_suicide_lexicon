@@ -125,7 +125,7 @@ def main():
         output_path=args.output_path,
         text_column=args.text_column,
         keep_columns=args.keep_columns,
-        run_low_lexicon=True
+        run_low_lexicon=False
     )
 
 if __name__ == "__main__":

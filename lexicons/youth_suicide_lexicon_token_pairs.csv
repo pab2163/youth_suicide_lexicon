@@ -33,6 +33,7 @@ knife|glass,my neck|my skin|my wrist|my vein|my arter|my arm|my throat|my insid|
 meds,kill m|kill you|kill u|lethal|overdose|bottle of|how many|impuls|urge|overtake|over take,TRUE,FALSE
 monoxide,kill m|kill you|kill u|lethal|toxic|ingest|poison,FALSE,FALSE
 muscle relax|flexeril|cyclobenza,kill m|kill you|kill u|lethal|toxic|poison,FALSE,FALSE
+my cuts|the cuts|your cuts|his cuts|her cuts,deep|fresh|blood|mark|deeper|visible|cover up|you can see|I can see|she saw|he saw,TRUE,TRUE
 narcotic,kill m|kill you|kill u|lethal|toxic|poison,FALSE,FALSE
 OD|OD'd|OD'ing|Odd|Oding|overtake|over take|syringe,die|dead|death|dying|died,TRUE,TRUE
 OD|OD'd|OD'ing|Odd|Oding|overtake|over take|syringe,meds|pot,TRUE,TRUE
@@ -49,5 +50,4 @@ rope|cord|cable,around my neck|around neck|around your neck|around his neck|arou
 shotgun|handgun|pistol|revolver|9mm|firearm|bullet,i want|pull the trigger|pulling the trigger|my head|my neck|to the head|in my mouth|at my face|my brain|painless|painful|my bed|nightstand|night stand,FALSE,FALSE
 slice|stab|slit|slicing|stabbing|slitting,wrist|neck|throat|vein|arter|stomach|belly|abdomen|I keep|impuls|urge|cant stop|myself|yourself|urself|painless|painful|bleed|blood,FALSE,FALSE
 suffocat,kill my|kill your|kill ur|lethal|pass out|passed out|pass out|how long|impuls|urge|painless|painful,FALSE,FALSE
-my cuts|the cuts|your cuts|his cuts|her cuts,deep|fresh|blood|mark|deeper|visible|cover up|you can see|I can see|she saw|he saw,TRUE,TRUE
 the attempt|my attempt|my last attempt|recent attempt|I attempted|you attempted|u attempted|ur attempt|your attempt,die|dead|death|dying|died|kill|k!ll!|k1ll|alive|lived,TRUE,TRUE
