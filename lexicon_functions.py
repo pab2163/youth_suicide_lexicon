@@ -52,7 +52,7 @@ def load_codebook_with_pairs(df):
         df['freestanding_token'] = False
 
     if 'freestanding_pair' not in df.columns:
-        df['freestsanding_pair'] = False
+        df['freestanding_pair'] = False
 
     patterns = []
     for _, row in df.iterrows():
