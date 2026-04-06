@@ -6,6 +6,10 @@ import emoji
 import numpy as np
 from tqdm import tqdm
 from io import StringIO
+from pathlib import Path 
+
+LEXICON_DIR = Path(__file__).parent / "lexicons"
+
 
 def robust_read_csv(fp):
     with open(fp, 'r', encoding='utf-8', errors='replace') as f:
@@ -190,8 +194,8 @@ def get_matching_token(text, patterns, paired):
             if means_re.search(text) and pairs_re.search(text):
                 return (means_re.pattern, pairs_re.pattern)
     else:
-        for token in patterns:
-            if token in text:
+        for compiled, token in patterns:
+            if compiled.search(text):
                 return token
     return None
 
@@ -285,9 +289,9 @@ def flag_suicide_related_emojis(df, text_column, output_flag_col='emoji_flag', o
 
 
 def flag_lexicon_custom(input_df, text_column):
-    custom_suicide_lexicon = pd.read_csv('lexicons/youth_suicide_lexicon_tokens.csv')
-    custom_suicide_tokenpairs=pd.read_csv('lexicons/youth_suicide_lexicon_token_pairs.csv')
-    celebrity_historical_suicides=pd.read_table('lexicons/youth_suicide_lexicon_celebrity_historic.txt', header=0)
+    custom_suicide_lexicon = pd.read_csv(f'{LEXICON_DIR}/youth_suicide_lexicon_tokens.csv')
+    custom_suicide_tokenpairs=pd.read_csv(f'{LEXICON_DIR}/youth_suicide_lexicon_token_pairs.csv')
+    celebrity_historical_suicides=pd.read_table(f'{LEXICON_DIR}/youth_suicide_lexicon_celebrity_historic.txt', header=0)
 
     custom_suicide_lexicon['token']=custom_suicide_lexicon['token'].astype(str).apply(lambda x: preproc_text(x))
     custom_suicide_lexicon['word_start'] = custom_suicide_lexicon['word_start'].fillna(0)
@@ -304,22 +308,23 @@ def flag_lexicon_custom(input_df, text_column):
     suicide_tokens = load_codebook_with_tokens(custom_suicide_lexicon)
     patterns = load_codebook_with_pairs(df=custom_suicide_tokenpairs)
 
-    input_df[text_column]=input_df[text_column].astype(str)
-    input_df[text_column]=input_df[text_column].apply(lambda x: preproc_text(x))
+    df = input_df.copy()
+    df[text_column]=df[text_column].astype(str)
+    df[text_column]=df[text_column].apply(lambda x: preproc_text(x))
 
-    input_df['youth_suicide_lexicon_tokens']=apply_codebook_to_column(df=input_df, 
+    input_df['youth_suicide_lexicon_tokens']=apply_codebook_to_column(df=df, 
                                                      text_column=text_column, 
                                                      patterns=suicide_tokens, 
                                                      paired=False,
                                                      progress_label='Single Suicide Lexicon Tokens')
     
-    input_df['youth_suicide_lexicon_celeb']=apply_codebook_to_column(df=input_df, 
+    input_df['youth_suicide_lexicon_celeb']=apply_codebook_to_column(df=df, 
                                                      text_column=text_column, 
                                                      patterns=celebrity_historical_suicide_tokens, 
                                                      paired=False,
                                                      progress_label='Celebrity/Historical Suicides')
     
-    input_df['youth_suicide_lexicon_pairs']=apply_codebook_to_column(df=input_df, 
+    input_df['youth_suicide_lexicon_pairs']=apply_codebook_to_column(df=df, 
                                                      text_column=text_column, 
                                                      patterns=patterns, 
                                                      paired=True,
@@ -330,10 +335,11 @@ def flag_lexicon_custom(input_df, text_column):
 
 def flag_lexicon_swaminathan_2023(input_df, text_column, debug=False):
     # Ensure text column is string and preprocessed
-    input_df[text_column] = input_df[text_column].astype(str).apply(lambda x: preproc_text(x))
+    df = input_df.copy()
+    df[text_column] = df[text_column].astype(str).apply(lambda x: preproc_text(x))
 
     # Load lexicon
-    swaminathan_2023_lexicon = pd.read_csv('lexicons/Swaminathan_2023_lexicon.csv')
+    swaminathan_2023_lexicon = pd.read_csv(f'{LEXICON_DIR}/Swaminathan_2023_lexicon.csv')
 
     # Melt full lexicon for general flag
     full_melted = swaminathan_2023_lexicon[[
@@ -362,7 +368,7 @@ def flag_lexicon_swaminathan_2023(input_df, text_column, debug=False):
 
     # Apply both sets
     input_df['suicide_lexicon_swaminathan_2023'] = apply_codebook_to_column(
-        df=input_df,
+        df=df,
         text_column=text_column,
         patterns=full_patterns,
         paired=False,
@@ -370,7 +376,7 @@ def flag_lexicon_swaminathan_2023(input_df, text_column, debug=False):
     )
 
     input_df['suicide_lexicon_swaminathan_2023_thoughts_methods_only'] = apply_codebook_to_column(
-        df=input_df,
+        df=df,
         text_column=text_column,
         patterns=suicide_patterns,
         paired=False,
@@ -380,10 +386,9 @@ def flag_lexicon_swaminathan_2023(input_df, text_column, debug=False):
     # Debug info
     if debug:
         for pattern, original in suicide_patterns:
-            matches = input_df[input_df[text_column].str.contains(pattern.pattern, case=False, regex=True)]
+            matches = df[df[text_column].str.contains(pattern.pattern, case=False, regex=True)]
             if not matches.empty:
                 print(f"Subset Match Pattern: {original}")
                 print(matches[[text_column]])
 
     return input_df
-
